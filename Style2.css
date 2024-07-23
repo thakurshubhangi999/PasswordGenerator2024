@@ -37,6 +37,9 @@ body{
     cursor: pointer;
     z-index: 2;
 }
+#togglePass{
+    right: 34px;
+}
 .passGen{
     border: none;
     background: #ffffff;

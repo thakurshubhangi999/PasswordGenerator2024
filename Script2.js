@@ -7,6 +7,7 @@ let numbersCheckbox = document.getElementById("numbers");
 let symbolsCheckbox = document.getElementById("symbols");
 let generatorButton = document.getElementById("genBtn");
 let copyPassword = document.getElementById("copyPass");
+let togglePassword = document.getElementById("togglePass");
 
 // showing input slider value
 sliderValue.textContent = inputSlider.value;
@@ -55,5 +56,17 @@ copyPassword.addEventListener("click", () => {
         copyPassword.innerHTML = "content_copy"
         copyPassword.title = "";
     }, 3000)
+  }
+});
+
+togglePassword.addEventListener("click", () => {
+  if (passBox.type === "password") {
+    passBox.type = "text";
+    togglePassword.innerText = "visibility";
+    togglePassword.title = "Hide Password";
+  } else {
+    passBox.type = "password";
+    togglePassword.innerText = "visibility_off";
+    togglePassword.title = "Show Password";
   }
 });

@@ -6,19 +6,24 @@
     <title>PW Generator</title>
     <link rel="stylesheet" href="Style2.css" />
     <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <h1>Password Generator</h1>
 
       <div class="inputBox">
-        <input type="text" class="passGen" id="pwField" disabled/>
-        <span class="material-icons" id="copyPass">
-          content_copy
-          </span>
+        <input type="text" class="passGen" id="pwField" disabled />
+        <span class="material-icons" id="copyPass"> content_copy </span>
+        <span
+          class="material-icons"
+          id="togglePass"
+          title="Show Password"
+        >
+          visibility_off
+        </span>
       </div>
 
       <input
@@ -37,22 +42,22 @@
 
       <div class="row">
         <label for="lowercase">Include Lowercase Letters (a-z)</label>
-        <input type="checkbox" name="lowercase" id="lowercase" checked/>
+        <input type="checkbox" name="lowercase" id="lowercase" checked />
       </div>
 
       <div class="row">
         <label for="uppercase">Include Uppercase Letters (A-Z)</label>
-        <input type="checkbox" name="uppercase" id="uppercase" checked/>
+        <input type="checkbox" name="uppercase" id="uppercase" checked />
       </div>
 
       <div class="row">
         <label for="numbers">Include Numbers (0-9)</label>
-        <input type="checkbox" name="numbers" id="numbers" checked/>
+        <input type="checkbox" name="numbers" id="numbers" checked />
       </div>
 
       <div class="row">
         <label for="symbols">Include Symbols (@-*)</label>
-        <input type="checkbox" name="symbols" id="symbols" checked/>
+        <input type="checkbox" name="symbols" id="symbols" checked />
       </div>
 
       <button class="genBtn" id="genBtn">Generate Password</button>
