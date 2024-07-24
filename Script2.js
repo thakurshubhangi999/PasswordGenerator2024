@@ -16,7 +16,10 @@ inputSlider.addEventListener("input", () => {
 });
 
 generatorButton.addEventListener("click", () => {
+  passBox.type = "password"; // Ensure the password field is in hidden mode
   passBox.value = generatorPassword();
+  togglePassword.innerText = "visibility_off";
+  togglePassword.title = "Show Password";
 });
 
 let lowerChars = "abcdefghijklmnopqrstuvwxyz";
@@ -52,13 +55,14 @@ copyPassword.addEventListener("click", () => {
     copyPassword.innerText = "check";
     copyPassword.title = "Password Copied";
 
-    setTimeout(()=>{
-        copyPassword.innerHTML = "content_copy"
-        copyPassword.title = "";
-    }, 3000)
+    setTimeout(() => {
+      copyPassword.innerHTML = "content_copy";
+      copyPassword.title = "";
+    }, 3000);
   }
 });
 
+// Toggle password visibility
 togglePassword.addEventListener("click", () => {
   if (passBox.type === "password") {
     passBox.type = "text";
